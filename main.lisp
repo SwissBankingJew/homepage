@@ -39,7 +39,7 @@
        (:script :src "https://cdn.tailwindcss.com")
        (:title ,title))
       (:body :class "container mx-auto px-4"
-	     ,*nav-bar*
+	     ,*navbar*
 	     ,@body))))
 
 (hunchentoot:define-easy-handler (say-yo :uri "/") ()
