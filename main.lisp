@@ -6,7 +6,9 @@
 (in-package :homepage)
 
 (defun start-server ()
-  (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242)))
+  (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor
+				    :port 4242
+				    :address "127.0.0.1")))
 
 ;; (defparameter *server* (start-server))
 
