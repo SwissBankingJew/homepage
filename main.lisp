@@ -8,7 +8,7 @@
 (defun start-server ()
   (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242)))
 
-(defparameter *server* (start-server))
+;; (defparameter *server* (start-server))
 
 (defun nav-bar ()
   (spinneret:with-html
