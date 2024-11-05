@@ -12,7 +12,7 @@
 
 ;; (defparameter *server* (start-server))
 
-(defun nav-bar ()
+(defparameter *navbar*
   (spinneret:with-html
     `(:nav :class "bg-gray-800 text-gray-100 p-4"
 	   (:ul :class "flex space-x-6"
@@ -36,9 +36,10 @@
      (:html
       (:head
        (:script :src "https://unpkg.com/htmx.org@2.0.3")
-       (:script :src "https://cdn.tailwindcss.com"))
+       (:script :src "https://cdn.tailwindcss.com")
+       (:title ,title))
       (:body :class "container mx-auto px-4"
-	     ,(nav-bar)
+	     ,*nav-bar*
 	     ,@body))))
 
 (hunchentoot:define-easy-handler (say-yo :uri "/") ()
