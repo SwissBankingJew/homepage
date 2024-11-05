@@ -12,7 +12,7 @@
 
 ;; (defparameter *server* (start-server))
 
-(defparameter *navbar*
+(defconstant *navbar*
   (spinneret:with-html
     `(:nav :class "bg-gray-800 text-gray-100 p-4"
 	   (:ul :class "flex space-x-6"
